@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Puppeteer browser cache (puppeteer downloads Chromium)
+.puppeteer/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Mac OS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage files
+coverage/
+
+# Output folders
+dist/
+build/
+
+# Lock files
+*.lock
+
+# IDE-specific files
+.idea/
