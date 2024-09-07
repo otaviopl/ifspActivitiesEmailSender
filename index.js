@@ -3,26 +3,16 @@ const { makeLogin } = require('./login');
 const { getAtividades } = require('./scraper');
 const { makeTemplate, sendEmail } = require('./mailSender');
 
-console.log('Script iniciado...');
-
 async function enterSite() {
-    console.log('Função enterSite chamada...');
-
     const browser = await launch({ headless: false });
     const page = await browser.newPage();
 
     try {
-        console.log('🚀 Iniciando o navegador...');
         await page.goto('https://moodle.scl.ifsp.edu.br');
-        console.log('🌐 Navegando para o Moodle...');
-
         await makeLogin(page);
         console.log('🔓 Login realizado com sucesso.');
-
         await page.waitForNavigation({ waitUntil: 'domcontentloaded' });
-        console.log('📃 Página carregada após o login.');
-
-        // Aqui começa a extração das atividades
+        
         const atividades = await getAtividades(page);
         console.log('📅 Atividades extraídas:', atividades);
 
