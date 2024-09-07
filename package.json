@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/otaviopl/ifspActivitiesEmailSender#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "nodemailer": "^6.9.15",
     "puppeteer": "^23.3.0"
   }
