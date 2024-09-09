@@ -1,7 +1,7 @@
-function makeTemplate(atividades) {
-}
+export function makeTemplate(atividades) {
 
-async function sendEmail(template) {
-}
+}  
 
-module.exports = { makeTemplate, sendEmail };
+export async function sendEmail(template) {
+
+}
